@@ -49,3 +49,6 @@ Para validar a eficiência, comparei esta implementação otimizada em Python co
 1. **Instale as dependências:**
    ```bash
    pip install numpy
+
+## Licença
+Este projeto está licenciado sob a Licença MIT.
