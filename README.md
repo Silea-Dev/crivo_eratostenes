@@ -6,7 +6,7 @@
 
 Este projeto explora a implementação de alta performance do clássico algoritmo **Crivo de Eratóstenes** utilizando **Python** e a biblioteca **NumPy**.
 
-O objetivo principal não é apenas encontrar números primos, mas demonstrar como a **Vetorização** e o **Slicing de Arrays** podem transformar uma linguagem interpretada (Python) em uma ferramenta de processamento numérico extremamente veloz, eliminando a necessidade de laços `for` explícitos.
+O objetivo principal não é apenas encontrar números primos, mas demonstrar como a **Vetorização** e o **Slicing de Arrays** podem transformar uma linguagem interpretada (Python) em uma ferramenta de processamento numérico extremamente veloz, eliminando a necessidade de laços `for` aninhados custosos.
 
 Este repositório serve como um estudo de caso sobre **Engenharia de Algoritmos** na interseção entre Matemática e Desenvolvimento de Software.
 
@@ -22,18 +22,18 @@ Em vez de verificar cada número individualmente (o que seria lento em Python pu
     # Marca todos os múltiplos de 'i' como False, começando de i*i
     is_prime[i*i::i] = False
     ```
-    *Isso delega o processamento para o backend em C do NumPy, tornando a execução ordens de magnitude mais rápida que um loop nativo.*
+    *Isso delega o processamento para o backend otimizado em C do NumPy, tornando a execução ordens de magnitude mais rápida que um loop nativo.*
 
 ## 📊 Benchmarks: Python (NumPy) vs. C++
 
 Para validar a eficiência, comparei esta implementação otimizada em Python com uma implementação padrão em C++ (conhecida por sua velocidade bruta).
 
-*Ambiente de teste: Processador [Seu Processador]*
+*Ambiente de teste: Processador Local*
 
 | Linguagem & Método | Limite ($N$) | Tempo de Execução |
 | :--- | :--- | :--- |
-| **Python (NumPy Vetorizado)** | 10.000.000 | **0.XX s** (Preencher) |
-| **C++ (std::vector)** | 10.000.000 | **0.XX s** (Preencher) |
+| **Python (NumPy Vetorizado)** | 10.000.000 | **0.XX s** |
+| **C++ (std::vector)** | 10.000.000 | **0.XX s** |
 | Python Puro (Listas - Sem NumPy) | 10.000.000 | *Time Limit Exceeded (>10s)* |
 
 > **Conclusão:** Com a utilização correta de bibliotecas otimizadas, o Python atinge uma performance competitiva com linguagens compiladas para tarefas de álgebra linear e processamento de vetores.
@@ -41,7 +41,7 @@ Para validar a eficiência, comparei esta implementação otimizada em Python co
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Python 3.x
-* **Core:** NumPy (Computing Backend)
+* **Core:** NumPy (Backend de Computação)
 * **Conceitos:** Complexidade de Algoritmos ($O(n \log \log n)$), Manipulação de Memória.
 
 ## 💻 Como Executar
